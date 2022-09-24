@@ -1,0 +1,48 @@
+@use "/scss/all" as *;
+
+body {
+   display: grid;
+   place-items: center;
+   background-color: var(--surface1);
+   color: var(--text1);
+}
+
+.delete-me {
+   display: grid;
+   grid-template-columns: auto auto;
+   column-gap: 2rem;
+
+   .col-left,
+   .col-right {
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-rows: min-content auto;
+      grid-gap: 1rem;
+
+      & > div {
+         width: 10rem;
+         aspect-ratio: 1;
+         background-color: red;
+         border: 1px solid gray;
+         border-radius: 5px;
+         box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2);
+
+         &:nth-of-type(even) {
+            grid-row: 2;
+         }
+
+         &:nth-child(1) {
+            background-color: var(--surface1);
+         }
+         &:nth-child(2) {
+            background-color: var(--surface2);
+         }
+         &:nth-child(3) {
+            background-color: var(--surface3);
+         }
+         &:nth-child(4) {
+            background-color: var(--surface4);
+         }
+      }
+   }
+}

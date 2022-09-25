@@ -1,22 +1,22 @@
 :root {
    /* LIGHT MODE */
-   --brand-light: orange;
-   --text1-light: hsl(210, 2%, 10%);
-   --text2-light: hsl(210, 2%, 15%);
-   --text3-light: hsl(210, 2%, 20%);
-   --surface1-light: hsl(210, 2%, 90%);
-   --surface2-light: hsl(210, 2%, 85%);
-   --surface3-light: hsl(210, 2%, 75%);
-   --surface4-light: hsl(210, 2%, 65%);
+   --brand-light: 40 100% 50%;
+   --text1-light: 210 2% 10%;
+   --text2-light: 210 2% 15%;
+   --text3-light: 210 2% 20%;
+   --surface1-light: 210 2% 90%;
+   --surface2-light: 210 2% 85%;
+   --surface3-light: 210 2% 75%;
+   --surface4-light: 210 2% 65%;
    /* DARK MODE */
-   --brand-dark: orange;
-   --text1-dark: hsl(210, 2%, 90%);
-   --text2-dark: hsl(210, 2%, 80%);
-   --text3-dark: hsl(210, 2%, 75%);
-   --surface1-dark: hsl(210, 20%, 10%);
-   --surface2-dark: hsl(210, 2%, 15%);
-   --surface3-dark: hsl(210, 2%, 25%);
-   --surface4-dark: hsl(210, 2%, 35%);
+   --brand-dark: 40 00% 50%;
+   --text1-dark: 210 2% 90%;
+   --text2-dark: 210 2% 80%;
+   --text3-dark: 210 2% 75%;
+   --surface1-dark: 210 20% 10%;
+   --surface2-dark: 210 2% 15%;
+   --surface3-dark: 210 2% 25%;
+   --surface4-dark: 210 2% 35%;
    /* COLOR MODE PREFERENCE: */
    color-scheme: light;
 }

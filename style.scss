@@ -3,46 +3,103 @@
 body {
    display: grid;
    place-items: center;
-   background-color: var(--surface1);
-   color: var(--text1);
+   background-color: hsl(var(--surface1));
+   color: hsl(var(--text1));
+   font-family: "Montserrat";
+   background-image: url(/img/circuit-board.svg);
+   font-size: 1.6rem;
 }
 
-.delete-me {
+.container {
    display: grid;
-   grid-template-columns: auto auto;
-   column-gap: 2rem;
+   place-items: center;
+}
+.quote-container {
+   --max-width: 90rem;
+   // width: auto;
+   max-width: var(--max-width);
+   padding: 2rem 3rem;
+   border-radius: calc(var(--max-width) * 0.01);
+   box-shadow: 0 1rem 1rem 1rem hsl(var(--surface4) / 0.5);
+   text-align: center;
+}
 
-   .col-left,
-   .col-right {
-      display: grid;
-      grid-auto-flow: row;
-      grid-template-rows: min-content auto;
-      grid-gap: 1rem;
+.quote-text {
+   font-size: 4.4rem;
+}
 
-      & > div {
-         width: 10rem;
-         aspect-ratio: 1;
-         background-color: red;
-         border: 1px solid gray;
-         border-radius: 5px;
-         box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2);
+.long-quote {
+   font-size: 3.6rem;
+}
 
-         &:nth-of-type(even) {
-            grid-row: 2;
-         }
+.fa-quote-left {
+   font-size: 8rem;
+}
 
-         &:nth-child(1) {
-            background-color: var(--surface1);
-         }
-         &:nth-child(2) {
-            background-color: var(--surface2);
-         }
-         &:nth-child(3) {
-            background-color: var(--surface3);
-         }
-         &:nth-child(4) {
-            background-color: var(--surface4);
-         }
-      }
+.quote-author {
+   font-size: 2.8rem;
+   font-weight: 400;
+   font-style: italic;
+   margin-block-start: 2rem;
+}
+
+.button-container {
+   margin-block-start: 1.5rem;
+   display: flex;
+   justify-content: space-between;
+}
+
+button {
+   --y: 0.5rem;
+   cursor: pointer;
+   font-size: 2.4rem;
+   padding: 0.75rem 2.751rem;
+   border: none;
+   border-radius: 0.5em;
+   box-shadow: var(--x, 0) var(--y) hsl(var(--surface4));
+   background-color: hsl(var(--text1));
+   color: hsl(var(--surface1));
+
+   &:hover {
+      filter: brightness(110%);
+   }
+   &:active {
+      --y: 0.25rem;
+      transform: translateY(var(--y));
+   }
+}
+
+.twitter-button:hover {
+   color: #38a1f3;
+}
+
+.fa-twitter {
+   font-size: 3rem;
+}
+
+.loader {
+   width: 12rem;
+   height: 12rem;
+   border: 16px solid hsl(var(--text3));
+   border-radius: 100%;
+   border-top: 16px solid transparent;
+   animation: spin 2s ease-in-out 0s infinite;
+}
+
+@keyframes spin {
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+@media screen and (max-width: 1000px) {
+   .quote-container {
+      margin: auto 10px;
+   }
+   .quote-text {
+      font-size: 2.4rem;
+   }
+   .quote-author {
+      font-size: 2rem;
    }
 }

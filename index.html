@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Vite-Sass Template</title>
+      <title>Quote Generator</title>
       <link rel="icon" type="image/svg+xml" href="img/vite.svg" />
       <link rel="stylesheet" href="style.scss" />
       <link
@@ -13,25 +13,38 @@
          crossorigin="anonymous"
          referrerpolicy="no-referrer"
       />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+         rel="stylesheet"
+      />
       <script defer type="module" src="main.js"></script>
    </head>
 
    <body>
       <div class="app" id="app">
-         <div class="delete-me">
-            <div class="col-left">
-               <h1>Hello There</h1>
-               <h2>Hello There</h2>
-               <h4>Hello There</h4>
-               <h5>Hello There</h5>
-               <p>Helo There</p>
+         <div class="container">
+            <div class="quote-container" id="quote-container">
+               <!-- Quote -->
+               <div class="quote-text">
+                  <i class="fas fa-quote-left"></i>
+                  <span id="quote"></span>
+               </div>
+               <!-- Author  -->
+               <div class="quote-author">
+                  <span id="author"></span>
+               </div>
+               <!-- Button -->
+               <div class="button-container">
+                  <button class="twitter-button" id="twitter" title="Tweet This!">
+                     <i class="fab fa-twitter"></i>
+                  </button>
+                  <button class="quote-button" id="new-quote">New Quote</button>
+               </div>
+               <!-- Loader -->
             </div>
-            <div class="col-right">
-               <div></div>
-               <div></div>
-               <div></div>
-               <div></div>
-            </div>
+            <div class="loader" id="loader"></div>
          </div>
       </div>
    </body>
